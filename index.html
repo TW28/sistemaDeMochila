@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Mochila</title>
+
+		<link rel="stylesheet" href="estilo.css">
+
+		<script src="jquery.js"></script>
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+		<h1>ARRASTE OS ITENS PRA MOCHILA</h1>
+
+		<center>
+		<div id="itens_na_mochila">
+			<div 
+				id="Faca_na_mochila"
+				class="arrastar"
+
+				onclick="tirarDaMochila('Faca');"
+			>
+				<img src="img/faca.png">
+			</div>
+			<script>
+				$('#Faca_na_mochila').hide()
+			</script>
+
+			<div 
+				id="Bussola_na_mochila"
+				class="arrastar"
+
+				onclick="tirarDaMochila('Bussola');"
+			>
+				<img src="img/bussola.png">
+			</div>
+			<script>
+				$('#Bussola_na_mochila').hide()
+			</script>
+
+			<div 
+				id="Mapa_na_mochila"
+				class="arrastar"
+
+				onclick="tirarDaMochila('Mapa');"
+			>
+				<img src="img/mapa.png">
+			</div>
+			<script>
+				$('#Mapa_na_mochila').hide()
+			</script>
+
+			<div 
+				id="Relogio_na_mochila"
+				class="arrastar"
+
+				onclick="tirarDaMochila('Relogio');"
+			>
+				<img src="img/relogio.png">
+			</div>
+			<script>
+				$('#Relogio_na_mochila').hide()
+			</script>
+		</div>
+		</center>
+
+
+
+
+
+
+		<!--Também seria possível centraliza com a tag obsoleta <center>-->
+		<div id="div_mochila">
+		<img 
+			id="mochila" 
+			src="img/mochila_fechada.png"
+			ondragover="onDragOver(event);"
+			ondrop="onDrop();"
+		>
+		</div>
+
+
+
+
+		<center>
+		<div id="barra_dos_itens">
+			<div
+				id="Faca" 
+				class="arrastar" 
+
+				draggable="true" 
+				ondragstart="onDragStart(event, 'Faca');"
+			>
+				<img src="img/faca.png">
+			</div>
+
+			<div 
+				id='Bussola'
+				class="arrastar" 
+
+				draggable="true" 
+				ondragstart="onDragStart(event, 'Bussola');"
+			>
+				<img src="img/bussola.png">
+			</div>
+
+			<div 
+				id='Mapa'
+				class="arrastar" 
+
+				draggable="true" 
+				ondragstart="onDragStart(event, 'Mapa');"
+			>
+				<img src="img/mapa.png">
+			</div>
+
+			<div 
+				id='Relogio'
+				class="arrastar" 
+
+				draggable="true" 
+				ondragstart="onDragStart(event, 'Relogio');"
+			>
+				<img src="img/relogio.png">
+			</div>
+
+			<!--
+				<div 
+				id=''
+				class="arrastar" 
+
+				draggable="true" 
+				ondragstart="onDragStart(event, '');"
+			>
+				<img src="img/">
+			</div>
+			-->
+		</div>
+		</center>
+	</body>
+</html>
